@@ -1,14 +1,15 @@
 // Place all the styles related to the Patios controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'base';
 
 #patios_show{
-
   .patio-attribute {
     padding-bottom: 10px;
+    color: $olive;
   }
-
   .patio-name {
     padding-right: 13px;
+    color: $olive;
   }
 }

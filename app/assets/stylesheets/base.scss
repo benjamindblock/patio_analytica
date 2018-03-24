@@ -1,2 +1,25 @@
+// COLOR SCHEME
+$red: #f15025;
+$dark-blue: #1e152a;
+$olive: #83781b;
+$white: #ffffff;
+$yellow: #ffc15e;
+
 .block { display: block }
 .underline { text-decoration: underline; }
+.center { text-align: center }
+a {
+  color: $red;
+  opacity: 0.8;
+
+  &:visited {
+    color: $red;
+    opacity: 0.5;
+  }
+
+  &:hover {
+    color: $red;
+    opacity: 1;
+    background-color: $white;
+  }
+}
