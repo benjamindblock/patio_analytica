@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Patios</h1>
+
+<div>
+  <%= '*'*70 %>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @patios.each do |patio| %>
+      <tr>
+        <td><%= link_to "#{patio.name}", patio %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

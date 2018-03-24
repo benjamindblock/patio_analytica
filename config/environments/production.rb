@@ -88,4 +88,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # key for sending requests to google API
+  config.google_api_key = ENV['GOOGLE_PLACES_API_KEY']
 end

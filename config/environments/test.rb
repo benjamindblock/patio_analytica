@@ -39,4 +39,7 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # key for sending requests to google API
+  config.google_api_key = ENV['GOOGLE_PLACES_API_KEY']
 end

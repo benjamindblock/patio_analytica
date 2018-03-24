@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @patio.name %></h1>
+
+<div>
+  <%= render_seating_location(@patio) %>
+</div>
+
+<div>
+  <strong><%= render_is_covered(@patio) %></strong>
+</div>
+
+<div>
+  <strong><%= render_has_view(@patio) %></strong>
+</div>
+
+<div>
+  <strong><%= render_is_recommended(@patio) %></strong>
+</div>
+
+<div>
+  <%= render_google_data(@google_data) %>
+</div>
+
+<%= link_to 'Back to Index', patios_path %>
