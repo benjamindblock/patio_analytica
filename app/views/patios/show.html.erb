@@ -1,24 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= @patio.name %></h1>
-
 <div>
+  <%= render_name(@patio) %>
+</div>
+
+<div class='patio-attribute'>
   <%= render_seating_location(@patio) %>
 </div>
 
-<div>
+<div class='patio-attribute'>
   <strong><%= render_is_covered(@patio) %></strong>
 </div>
 
-<div>
+<div class='patio-attribute'>
   <strong><%= render_has_view(@patio) %></strong>
 </div>
 
-<div>
-  <strong><%= render_is_recommended(@patio) %></strong>
-</div>
-
-<div>
+<div class='patio-attribute'>
+  <span class='block underline'>Google Information</span>
   <%= render_google_data(@google_data) %>
 </div>
 

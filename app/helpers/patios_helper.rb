@@ -1,5 +1,12 @@
 module PatiosHelper
 
+  def render_name patio
+    content_tag :h1 do
+      concat content_tag :span, patio.name, class: 'patio-name'
+      concat fa_icon "star"
+    end
+  end
+
   def render_seating_location patio
     unless patio.standard?
       content_tag :span, patio.seating_location.titleize
@@ -18,18 +25,12 @@ module PatiosHelper
     end
   end
 
-  def render_is_recommended patio
-    if patio.is_recommended?
-      content_tag :span, "Critics approved!"
-    end
-  end
-
   def render_google_data google_data
     current_day = Time.now.strftime("%A")
     hours_today = google_data['opening_hours']['weekday_text'].reject{ |day| day.exclude?(current_day) }.first
     capture do
-      concat content_tag :div, hours_today
-      concat content_tag :div, "Google Rating: #{google_data['rating']}"
+      concat content_tag :span, hours_today, class: 'block'
+      concat content_tag :span, "Rating: #{google_data['rating']}", class: 'block'
     end
   end
 
