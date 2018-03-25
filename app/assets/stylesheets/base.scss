@@ -4,13 +4,14 @@ $dark-blue: #1e152a;
 $olive: #83781b;
 $white: #ffffff;
 $yellow: #ffc15e;
+$background: #fcfbf9;
 
 .block { display: block }
 .underline { text-decoration: underline; }
 .center { text-align: center }
 
 body {
-  background-color: #fff;
+  background-color: $background;
   color: $dark-blue;
   margin: 33px;
 }
