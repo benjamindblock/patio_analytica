@@ -1,30 +1,43 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
 
-$(document).on('turbolinks:load', function() {
-	var width = $(window).width() - 40;
-	var starttime = new Date().getTime();
-	var letters = $('.name-for-animation').text();
-	var wavy_letters = $('#wavy_letters');
-	for (i = 0; i < letters.length; i++) {
-		$('<div>', {
-			html: letters[i]
-		})
-		.addClass('letter')
-		.appendTo(wavy_letters);
-	}
+$(document).on('ready', function() {
 
-	function run() {
-		var elapsed = new Date().getTime() - starttime;
-		var pos = elapsed * 0.1;
+  if($('#patios_show').length > 0){
+    set_letters();
+    animate_letters();
+  }
 
-		$('div.letter').each(function(index, letter) {
-			var posx = (pos + 20 * index) % width;
-			var posy = 120 + Math.sin(posx / 80) * 80;
-			$(letter).css('left', posx + 'px');
-			$(letter).css('top', posy + 'px');
-		});
-	}
+  function set_letters(){
+  	var letters = $('.name-for-animation').text();
+  	var wavy_letters = $('#wavy_letters');
+  	for (i = 0; i < letters.length; i++) {
+  		$('<div>', {
+  			html: letters[i]
+  		})
+  		.addClass('letter')
+  		.appendTo(wavy_letters);
+  	}
+  }
 
-	setInterval(run, 30);
+  function animate_letters(){
+    var width = $(window).width() - 40;
+    var starttime = new Date().getTime();
+
+    setInterval(function(){
+      var elapsed = new Date().getTime() - starttime;
+  		var pos = elapsed * 0.1;
+
+  		$('div.letter').each(function(index, letter) {
+  			var posx = (pos + 20 * index) % width;
+  			var posy = 100 + Math.sin(posx / 80) * 80;
+  			// $(letter).css('left', posx + 'px');
+  			// $(letter).css('top', posy + 'px');
+        $(letter).animate({
+          left: posx + 'px',
+          top: posy + 'px'
+        }, 20);
+  		});
+    }, 30);
+  }
 });
