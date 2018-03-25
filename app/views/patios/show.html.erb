@@ -24,7 +24,11 @@
     <%= render_google_data(@google_data) %>
   </div>
 
-  <%= link_to 'Back to Index', patios_path %>
+  <div class='patio-attribute'>
+    <%= render_external_google_info_link(@patio.google_place_id) %>
+  </div>
+
+  <%= link_to '<<<<<<<<< Back to Index', patios_path %>
 
   <div class='map-container'>
     <div id="map" class='center'></div>

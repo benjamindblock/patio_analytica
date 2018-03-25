@@ -36,6 +36,13 @@ module PatiosHelper
     end
   end
 
+  def render_external_google_info_link google_place_id
+    api_uri = URI("https://www.google.com/maps/search/")
+    params = {api: 1, query: 'Google', query_place_id: google_place_id}
+    api_uri.query = URI.encode_www_form(params)
+    link_to "Click here for more info", api_uri.to_s, target: "_blank"
+  end
+
   def render_patio_link patio
     content_tag :span do
       concat link_to "#{patio.name}", patio, class: 'patio-name'
