@@ -36,4 +36,11 @@ module PatiosHelper
     end
   end
 
+  def render_patio_link patio
+    content_tag :span do
+      concat link_to "#{patio.name}", patio, class: 'patio-name'
+      concat fa_icon "star", class: 'recommended' if patio.is_recommended?
+    end
+  end
+
 end

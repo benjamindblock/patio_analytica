@@ -1,6 +1,4 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Patios</h1>
+<h1>Seattle Patios</h1>
 
 <div>
   <%= '*'*70 %>
@@ -16,7 +14,7 @@
   <tbody>
     <% @patios.each do |patio| %>
       <tr>
-        <td><%= link_to "#{patio.name}", patio %></td>
+        <td><%= render_patio_link(patio) %></td>
       </tr>
     <% end %>
   </tbody>

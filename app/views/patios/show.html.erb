@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <div class='center'>
   <div>
     <%= render_name(@patio) %>
@@ -29,7 +27,7 @@
   </div>
 
   <% lat, long = @google_data['geometry']['location'].values %>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMQzo9wodM8JuMJ_fH4MkAUlzax9QsMeg&callback=initMap"
+  <script src="https://maps.googleapis.com/maps/api/js?key=<%= Rails.application.config.google_api_key %>&callback=initMap"
     async defer></script>
   <script>
       var map;
