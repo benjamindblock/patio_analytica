@@ -13,12 +13,10 @@
     margin-bottom: 10px;
   }
 
-  .weather {
-    padding-left: 10px;
-  }
-
-  .random-patio-link {
-    a { color: $yellow; }
+  .weather, .random-patio-link {
+    padding: 10px;
+    background-color: $yellow;
+    margin-top: 10px;
   }
 
   marquee {
@@ -44,7 +42,7 @@
   .patio-name {
     padding-right: 13px;
   }
-  
+
   .recommended {
     color: $yellow;
   }
