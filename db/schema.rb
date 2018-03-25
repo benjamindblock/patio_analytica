@@ -18,12 +18,16 @@ ActiveRecord::Schema.define(version: 20180324220544) do
   create_table "patios", force: :cascade do |t|
     t.string "name"
     t.string "google_place_id"
-    t.integer "seating_location"
+    t.text "special_notes"
+    t.integer "region"
+    t.string "neighborhood"
+    t.boolean "is_recommended"
+    t.boolean "is_bougie"
+    t.boolean "more_bar_than_restaurant"
+    t.boolean "on_rooftop"
+    t.boolean "is_small"
     t.boolean "is_covered"
     t.boolean "has_view"
-    t.boolean "is_recommended"
-    t.string "neighborhood"
-    t.integer "region"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

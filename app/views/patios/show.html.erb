@@ -1,22 +1,19 @@
 <div class='center'>
+
   <div>
     <%= render_name(@patio) %>
   </div>
 
   <div class='patio-attribute'>
-    <%= @patio.neighborhood %>
+    <%= render_location(@patio) %>
   </div>
 
   <div class='patio-attribute'>
-    <%= render_seating_location(@patio) %>
+    <%= render_special_notes(@patio) %>
   </div>
 
   <div class='patio-attribute'>
-    <strong><%= render_is_covered(@patio) %></strong>
-  </div>
-
-  <div class='patio-attribute'>
-    <strong><%= render_has_view(@patio) %></strong>
+    <%= render_extra_attributes(@patio) %>
   </div>
 
   <div class='patio-attribute'>

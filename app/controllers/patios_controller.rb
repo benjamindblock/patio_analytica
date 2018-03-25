@@ -3,7 +3,7 @@ class PatiosController < ApplicationController
 
   # GET /patios
   def index
-    @patios = Patio.all
+    @patios = Patio.all.order(name: :asc)
   end
 
   # GET /patios/1

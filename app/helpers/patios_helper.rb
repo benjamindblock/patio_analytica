@@ -9,22 +9,28 @@ module PatiosHelper
     end
   end
 
-  def render_seating_location patio
-    unless patio.standard?
-      content_tag :span, patio.seating_location.titleize
+  def render_location patio
+    capture do
+      concat content_tag :span, patio.region.titleize
+      concat content_tag :span, ": #{patio.neighborhood}"
     end
   end
 
-  def render_is_covered patio
-    if patio.is_covered?
-      content_tag :span, "Covered seating available"
-    end
+  def render_special_notes patio
+    content_tag :span, patio.special_notes
   end
 
-  def render_has_view patio
-    if patio.has_view?
-      content_tag :span, "Great view!"
+  def render_extra_attributes patio
+    strings = []
+    capture do
+      [:is_bougie, :more_bar_than_restaurant, :on_rooftop,
+       :is_small, :is_covered, :has_view].each do |attribute|
+        if patio.public_send(attribute)
+          strings << t(attribute)
+        end
+      end
     end
+    content_tag :span, strings.join(" + ")
   end
 
   def render_google_data google_data
