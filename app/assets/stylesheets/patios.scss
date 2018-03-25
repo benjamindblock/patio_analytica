@@ -60,7 +60,6 @@
   }
 
   .patio-name {
-    padding-right: 13px;
     color: $dark-blue;
     text-decoration-line: underline;
     text-decoration-style: wavy;
@@ -71,6 +70,7 @@
   }
   .recommended {
     color: $yellow;
+    padding-left: 13px;
   }
 
   .letter {
