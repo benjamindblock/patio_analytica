@@ -91,4 +91,5 @@ Rails.application.configure do
 
   # key for sending requests to google API
   config.google_api_key = ENV['GOOGLE_PLACES_API_KEY']
+  config.weather_api_key = ENV['WEATHER_UNDERGROUND_API_KEY']
 end

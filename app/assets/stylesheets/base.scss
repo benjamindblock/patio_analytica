@@ -5,10 +5,11 @@ $olive: #83781b;
 $yellow: #ffc15e;
 $background: #fcfbf9;
 
-.block { display: block }
+.block { display: block; }
 .underline { text-decoration: underline; }
-.center { text-align: center }
-.hidden { display: none }
+.center { text-align: center; }
+.hidden { display: none; }
+.right { float: right; }
 
 body {
   background-color: $background;

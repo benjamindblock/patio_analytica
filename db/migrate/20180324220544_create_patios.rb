@@ -18,6 +18,7 @@ class CreatePatios < ActiveRecord::Migration[5.1]
       t.boolean :is_small
       t.boolean :is_covered
       t.boolean :has_view
+      t.boolean :on_street
 
       t.timestamps
     end

@@ -1,6 +1,9 @@
 <div>
   <h1>Seattle Patio Club</h1>
   <span class='random-patio-link'><%= link_to 'Take me somewhere fun!', random_patios_path %></span>
+  <span class='right weather'><%= "#{@weather_data[:temperature]}&deg;".html_safe %></span>
+  <span class='right weather'><%= @weather_data[:weather] %></span>
+  <span class='right weather'><%= render_weather_warning(@weather_data) %></span>
 </div>
 
 <marquee><%= 'Welcome! :~)' %></marquee>

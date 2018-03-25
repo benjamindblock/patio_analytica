@@ -27,6 +27,7 @@ CSV.foreach(filepath, headers: true) do |row|
   create_hash['is_small'] = get_boolean_field_val(row['Small Patio'])
   create_hash['is_covered'] = get_boolean_field_val(row['Covered Patio'])
   create_hash['has_view'] = get_boolean_field_val(row['View'])
+  create_hash['on_street'] = get_boolean_field_val(row['Street Patio'])
 
   Patio.create!(create_hash)
 end

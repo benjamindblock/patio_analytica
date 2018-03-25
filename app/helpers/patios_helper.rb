@@ -1,5 +1,11 @@
 module PatiosHelper
 
+  def render_weather_warning weather_data
+    temp = weather_data[:temperature].to_f
+    conditions = weather_data[:weather]
+    "Looks chilly!!!!" if temp < 50.0
+  end
+
   def render_name patio
     content_tag :h1 do
       concat content_tag :span, patio.name, class: 'patio-name'
@@ -23,7 +29,7 @@ module PatiosHelper
     strings = []
     capture do
       [:is_bougie, :more_bar_than_restaurant, :on_rooftop,
-       :is_small, :is_covered, :has_view].each do |attribute|
+       :is_small, :is_covered, :has_view, :on_street].each do |attribute|
         if patio.public_send(attribute)
           strings << t(attribute)
         end

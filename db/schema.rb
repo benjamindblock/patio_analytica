@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20180324220544) do
     t.boolean "is_small"
     t.boolean "is_covered"
     t.boolean "has_view"
+    t.boolean "on_street"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
