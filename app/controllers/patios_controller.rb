@@ -11,6 +11,13 @@ class PatiosController < ApplicationController
     set_google_data
   end
 
+  # GET /patios/random
+  def random
+    @patio = Patio.order("RANDOM()").first
+    set_google_data
+    redirect_to patio_url(@patio)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_patio

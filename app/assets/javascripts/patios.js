@@ -31,12 +31,10 @@ $(document).on('ready', function() {
   		$('div.letter').each(function(index, letter) {
   			var posx = (pos + 20 * index) % width;
   			var posy = 100 + Math.sin(posx / 80) * 80;
-  			// $(letter).css('left', posx + 'px');
-  			// $(letter).css('top', posy + 'px');
         $(letter).animate({
           left: posx + 'px',
           top: posy + 'px'
-        }, 20);
+        }, 30);
   		});
     }, 30);
   }

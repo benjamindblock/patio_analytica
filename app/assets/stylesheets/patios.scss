@@ -13,6 +13,14 @@
     margin-bottom: 10px;
   }
 
+  .random-patio-link {
+    a { color: $yellow; }
+  }
+
+  marquee {
+    padding-top: 20px;
+  }
+
   .column {
     float: left;
     width: 20%;
