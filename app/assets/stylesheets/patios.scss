@@ -3,7 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import 'base';
 
-#patios_show, #patios_index{
+#patios_index {
+  .patio-name {
+    padding-right: 13px;
+  }
+  .recommended {
+    color: $yellow;
+  }
+}
+
+#patios_show {
   .patio-attribute {
     padding-bottom: 10px;
     color: $olive;
@@ -26,5 +35,4 @@
       height: 300px;
     }
   }
-
 }
