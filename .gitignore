@@ -17,6 +17,7 @@
 /yarn-error.log
 
 */**/.DS_STORE
+.DS_STORE
 test/coverage
 .byebug_history
 .env
