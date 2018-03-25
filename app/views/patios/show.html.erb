@@ -1,7 +1,9 @@
 <div class='center'>
 
-  <div>
+  <div class='animated-name'>
     <%= render_name(@patio) %>
+    <div class='hidden name-for-animation'><%= @patio.name %></div>
+    <div id='wavy_letters'></div>
   </div>
 
   <div class='patio-attribute'>
@@ -17,7 +19,6 @@
   </div>
 
   <div class='patio-attribute'>
-    <span class='block underline'>Google Information</span>
     <%= render_google_data(@google_data) %>
   </div>
 

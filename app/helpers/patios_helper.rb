@@ -35,10 +35,14 @@ module PatiosHelper
 
   def render_google_data google_data
     current_day = Time.now.strftime("%A")
-    hours_today = google_data['opening_hours']['weekday_text'].reject{ |day| day.exclude?(current_day) }.first
+    all_hours = google_data.dig('opening_hours', 'weekday_text')
+    hours_today = ""
+    if all_hours
+      hours_today = all_hours.reject{ |day| day.exclude?(current_day) }.first
+    end
+
     capture do
       concat content_tag :span, hours_today, class: 'block'
-      concat content_tag :span, "Rating: #{google_data['rating']}", class: 'block'
     end
   end
 
