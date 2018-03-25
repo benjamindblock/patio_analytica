@@ -2,7 +2,6 @@
 $red: #f15025;
 $dark-blue: #1e152a;
 $olive: #83781b;
-$white: #ffffff;
 $yellow: #ffc15e;
 $background: #fcfbf9;
 
@@ -68,6 +67,6 @@ a {
   &:hover {
     color: $red;
     opacity: 1;
-    background-color: $white;
+    background-color: $background;
   }
 }
