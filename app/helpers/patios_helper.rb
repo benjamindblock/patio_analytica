@@ -3,7 +3,9 @@ module PatiosHelper
   def render_name patio
     content_tag :h1 do
       concat content_tag :span, patio.name, class: 'patio-name'
-      concat fa_icon "star"
+      if patio.is_recommended?
+        concat fa_icon "star", class: 'recommended'
+      end
     end
   end
 

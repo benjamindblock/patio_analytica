@@ -22,6 +22,30 @@
     <%= render_google_data(@google_data) %>
   </div>
 
-
   <%= link_to 'Back to Index', patios_path %>
+
+  <div class='map-container'>
+    <div id="map" class='center'></div>
+  </div>
+
+  <% lat, long = @google_data['geometry']['location'].values %>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMQzo9wodM8JuMJ_fH4MkAUlzax9QsMeg&callback=initMap"
+    async defer></script>
+  <script>
+      var map;
+      var marker;
+      var patio_location = {lat: parseFloat('<%= lat %>'), lng: parseFloat('<%= long %>')};
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: patio_location,
+          zoom: 15
+        });
+
+        marker = new google.maps.Marker({
+          position: patio_location,
+          map: map,
+          title: '<%= @patio.name %>'
+        });
+      }
+  </script>
 </div>

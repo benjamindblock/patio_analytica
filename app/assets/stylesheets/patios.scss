@@ -12,4 +12,19 @@
     padding-right: 13px;
     color: $olive;
   }
+  .recommended {
+    color: $yellow;
+  }
+
+  .map-container{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+
+    #map {
+      width: 700px;
+      height: 300px;
+    }
+  }
+
 }
