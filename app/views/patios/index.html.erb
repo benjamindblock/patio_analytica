@@ -1,21 +1,15 @@
-<h1>Seattle Patios</h1>
+<h1>Seattle Patio Compendium</h1>
 
-<div>
-  <%= '*'*70 %>
+<div class='index-break'></div>
+
+<div class='row'>
+  <% Patio.regions.each do |region, _v| %>
+    <div class='column'><%= region.titleize %></div>
+  <% end %>
 </div>
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @patios.each do |patio| %>
-      <tr>
-        <td><%= render_patio_link(patio) %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class='row'>
+  <div class='column'><%= render_patios(@patios.south) %></div>
+  <div class='column'><%= render_patios(@patios.central) %></div>
+  <div class='column'><%= render_patios(@patios.downtown) %></div>
+  <div class='column'><%= render_patios(@patios.north) %></div>
+</div>

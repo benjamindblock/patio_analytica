@@ -11,11 +11,42 @@ Patio.create!(name: 'Bar Vacilando',
               seating_location: Patio.seating_locations[:standard],
               is_covered: true,
               has_view: false,
-              is_recommended: true)
+              is_recommended: true,
+              neighborhood: 'Capitol Hill',
+              region: Patio.regions[:central])
 
 Patio.create!(name: "Linda's Tavern",
               google_place_id: 'ChIJq_ZsMcxqkFQR03TQy4-KrBE',
               seating_location: Patio.seating_locations[:standard],
               is_covered: false,
               has_view: false,
-              is_recommended: false)
+              is_recommended: false,
+              neighborhood: 'Capitol Hill',
+              region: Patio.regions[:central])
+
+Patio.create!(name: "Brimmer & Heeltap",
+              google_place_id: 'ChIJw3NuNbUVkFQRakTXJ8_lT5E',
+              seating_location: Patio.seating_locations[:standard],
+              is_covered: false,
+              has_view: false,
+              is_recommended: true,
+              neighborhood: 'Ballard',
+              region: Patio.regions[:north])
+
+Patio.create!(name: "Zig Zag Cafe",
+              google_place_id: 'ChIJUQY5irJqkFQRNyEM-1Nq3oQ',
+              seating_location: Patio.seating_locations[:standard],
+              is_covered: false,
+              has_view: false,
+              is_recommended: true,
+              neighborhood: 'Pike Place',
+              region: Patio.regions[:downtown])
+
+Patio.create!(name: "The Blu Grouse",
+              google_place_id: 'ChIJkXPcf79BkFQRXPs2AKy1JEc',
+              seating_location: Patio.seating_locations[:standard],
+              is_covered: false,
+              has_view: false,
+              is_recommended: false,
+              neighborhood: 'Georgetown',
+              region: Patio.regions[:south])

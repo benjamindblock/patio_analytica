@@ -43,4 +43,15 @@ module PatiosHelper
     end
   end
 
+  def render_patios scoped_patios
+    capture do
+      scoped_patios.each do |patio|
+        wrap = content_tag :div, nil, class: 'index-patio-container' do
+          render_patio_link(patio)
+        end
+        concat wrap
+      end
+    end
+  end
+
 end

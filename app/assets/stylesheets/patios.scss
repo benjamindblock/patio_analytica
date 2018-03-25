@@ -4,6 +4,31 @@
 @import 'base';
 
 #patios_index {
+
+  .index-break {
+    height: 4px;
+    width: 100%;
+    border-bottom: 2px solid $dark-blue;
+    opacity: 0.7;
+    margin-bottom: 10px;
+  }
+
+  .column {
+    float: left;
+    width: 20%;
+    padding: 10px;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .index-patio-container {
+    padding-bottom: 10px;
+  }
+
   .patio-name {
     padding-right: 13px;
   }

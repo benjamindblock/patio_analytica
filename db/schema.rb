@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 20180324220544) do
     t.boolean "is_covered"
     t.boolean "has_view"
     t.boolean "is_recommended"
+    t.string "neighborhood"
+    t.integer "region"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

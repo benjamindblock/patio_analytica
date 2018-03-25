@@ -7,6 +7,8 @@ class CreatePatios < ActiveRecord::Migration[5.1]
       t.boolean :is_covered
       t.boolean :has_view
       t.boolean :is_recommended
+      t.string :neighborhood
+      t.integer :region
 
       t.timestamps
     end
