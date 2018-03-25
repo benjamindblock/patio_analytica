@@ -46,6 +46,11 @@
   .recommended {
     color: $yellow;
   }
+
+  .manifesto {
+    padding-top: 20px;
+    span { text-decoration-line: underline; }
+  }
 }
 
 #patios_show {
