@@ -31,8 +31,8 @@
 
 en:
   hello: "Hello world"
-  is_bougie: 'Bougie spot'
-  more_bar_than_restaurant: 'More of a bar vibe'
+  is_bougie: 'Bougie vibe'
+  more_bar_than_restaurant: 'More of a bar'
   on_rooftop: 'Rooftop'
   is_small: 'Smaller patio'
   is_covered: 'Is covered'

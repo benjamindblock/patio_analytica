@@ -11,8 +11,7 @@ module PatiosHelper
 
   def render_location patio
     capture do
-      concat content_tag :span, patio.region.titleize
-      concat content_tag :span, ": #{patio.neighborhood}"
+      concat content_tag :span, patio.neighborhood
     end
   end
 

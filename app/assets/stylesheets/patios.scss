@@ -47,13 +47,19 @@
 
 #patios_show {
   .patio-attribute {
-    padding-bottom: 10px;
+    padding-top: 18px;
     color: $olive;
   }
 
   .patio-name {
     padding-right: 13px;
     color: $dark-blue;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+  }
+
+  .google-link {
+    padding-top: 20px;
   }
   .recommended {
     color: $yellow;
