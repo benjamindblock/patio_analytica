@@ -1,3 +1,5 @@
+require 'net/http'
+
 desc "This task is called by the Heroku scheduler to update weather data"
 task :update_weather => :environment do
   puts "*"*50
