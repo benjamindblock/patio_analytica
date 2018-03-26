@@ -36,6 +36,6 @@ class PatiosController < ApplicationController
     end
 
     def set_weather_data
-      @weather_data = WeatherDatum.last
+      @weather_datum = WeatherDatum.last
     end
 end
