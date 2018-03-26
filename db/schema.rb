@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180324220544) do
+ActiveRecord::Schema.define(version: 20180326154934) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,14 @@ ActiveRecord::Schema.define(version: 20180324220544) do
     t.boolean "is_covered"
     t.boolean "has_view"
     t.boolean "on_street"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "weather_data", force: :cascade do |t|
+    t.decimal "temperature"
+    t.string "conditions"
+    t.string "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

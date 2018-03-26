@@ -38,10 +38,6 @@ class PatiosController < ApplicationController
     end
 
     def set_weather_data
-      key = Rails.application.config.weather_api_key
-      uri = URI("http://api.wunderground.com/api/#{key}/conditions/q/CA/Seattle.json")
-      response = Net::HTTP.get_response(uri)
-      response = JSON.parse(response.body)['current_observation']
-      @weather_data = {weather: response['weather'], temperature: response['temp_f']}
+      @weather_data = WeatherDatum.last
     end
 end

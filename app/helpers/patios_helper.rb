@@ -1,9 +1,13 @@
 module PatiosHelper
 
-  def render_weather_warning weather_data
-    temp = weather_data[:temperature].to_f
-    conditions = weather_data[:weather]
-    "Looks chilly!!!!" if temp < 50.0
+  def render_weather_info weather_datum
+    capture do
+      if weather_datum.present?
+        concat content_tag :span, "#{weather_datum.temperature}&deg;".html_safe, class: 'left weather'
+        concat content_tag :span, weather_datum.conditions, class: 'left weather'
+        concat content_tag :span, weather_datum.message, class: 'left weather'
+      end
+    end
   end
 
   def render_name patio

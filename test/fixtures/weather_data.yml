@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  temperature: 9.99
+  conditions: MyString
+  message: MyString
+
+two:
+  temperature: 9.99
+  conditions: MyString
+  message: MyString

@@ -4,9 +4,7 @@
 
 <div class='row'>
   <span class='left random-patio-link'><%= link_to 'Take me somewhere fun!', random_patios_path %></span>
-  <span class='left weather'><%= "#{@weather_data[:temperature]}&deg;".html_safe %></span>
-  <span class='left weather'><%= @weather_data[:weather] %></span>
-  <span class='left weather'><%= render_weather_warning(@weather_data) %></span>
+  <%= render_weather_info(@weather_datum) %>
 </div>
 
 <marquee><%= 'Welcome! :~)' %></marquee>
