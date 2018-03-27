@@ -21,7 +21,11 @@
   </div>
 
   <div class='patio-attribute'>
-    <%= render_google_data(@google_data) %>
+    <%= render_price(@google_data) %>
+  </div>
+
+  <div class='patio-attribute'>
+    <%= render_hours(@google_data) %>
   </div>
 
   <div class='google-link'><%= render_external_google_info_link(@patio.google_place_id) %></div>

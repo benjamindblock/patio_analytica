@@ -42,21 +42,17 @@ module PatiosHelper
     content_tag :span, strings.join(" + ")
   end
 
-  def render_google_data google_data
+  def render_hours google_data
     current_day = Time.now.strftime("%A")
-    all_hours = google_data.dig('opening_hours', 'weekday_text')
-    hours_today = ""
-    if all_hours
-      hours_today = all_hours.reject{ |day| day.exclude?(current_day) }.first
-    end
+    all_days = google_data.dig('opening_hours', 'weekday_text')
+    hours_today = all_days.reject{ |day| day.exclude?(current_day) }.first
+    capture { concat content_tag :span, hours_today } if hours_today.present?
+  end
 
+  def render_price google_data
     price = google_data["price_level"].to_i
-    price = "$"*price
-
-    capture do
-      concat content_tag :span, price, class: 'block' if price.present?
-      concat content_tag :span, hours_today, class: 'block patio-attribute'
-    end
+    str = "$"*price
+    capture { concat content_tag :span, str }  if str.present?
   end
 
   def render_external_google_info_link google_place_id
