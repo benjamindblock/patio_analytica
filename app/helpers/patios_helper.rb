@@ -54,7 +54,7 @@ module PatiosHelper
     price = "$"*price
 
     capture do
-      concat content_tag :span, price, class: 'block'
+      concat content_tag :span, price, class: 'block' if price.present?
       concat content_tag :span, hours_today, class: 'block patio-attribute'
     end
   end
