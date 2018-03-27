@@ -35,6 +35,7 @@ class PatiosController < ApplicationController
       api_uri.query = URI.encode_www_form(params)
       response = Net::HTTP.get_response(api_uri)
       @google_data = JSON.parse(response.body)["result"]
+      puts JSON.pretty_generate(@google_data)
     end
 
     def set_weather_data

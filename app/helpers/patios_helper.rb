@@ -50,8 +50,12 @@ module PatiosHelper
       hours_today = all_hours.reject{ |day| day.exclude?(current_day) }.first
     end
 
+    price = google_data["price_level"].to_i
+    price = "$"*price
+
     capture do
-      concat content_tag :span, hours_today, class: 'block'
+      concat content_tag :span, price, class: 'block'
+      concat content_tag :span, hours_today, class: 'block patio-attribute'
     end
   end
 

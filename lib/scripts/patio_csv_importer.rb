@@ -10,7 +10,7 @@ CSV.foreach(filepath, headers: true) do |row|
   create_hash = {}
 
   # basic info
-  create_hash['name'] = row['Patio Name'].strip
+  create_hash['name'] = row['Patio Name'].strip.upcase
   create_hash['google_place_id'] = row['Google ID'].strip
   create_hash['special_notes'] = row['Special Classification']&.strip
 
