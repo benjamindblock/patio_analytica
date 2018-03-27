@@ -10,23 +10,10 @@
     <%= render_location(@patio) %>
   </div>
 
-  <% if @patio.special_notes.present? %>
-    <div class='patio-attribute'>
-      <%= render_special_notes(@patio) %>
-    </div>
-  <% end %>
-
-  <div class='patio-attribute'>
-    <%= render_extra_attributes(@patio) %>
-  </div>
-
-  <div class='patio-attribute'>
-    <%= render_price(@google_data) %>
-  </div>
-
-  <div class='patio-attribute'>
-    <%= render_hours(@google_data) %>
-  </div>
+  <%= render_special_notes(@patio) %>
+  <%= render_extra_attributes(@patio) %>
+  <%= render_price(@google_data) %>
+  <%= render_hours(@google_data) %>
 
   <div class='google-link'><%= render_external_google_info_link(@patio.google_place_id) %></div>
   <div><%= link_to '<<<<<<<<< Back to Index', patios_path %></div>

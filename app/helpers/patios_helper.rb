@@ -26,7 +26,10 @@ module PatiosHelper
   end
 
   def render_special_notes patio
-    content_tag :span, patio.special_notes
+    notes = patio.special_notes
+    if notes.present?
+      content_tag :span, notes, class: 'block patio-attribute'
+    end
   end
 
   def render_extra_attributes patio
@@ -39,20 +42,28 @@ module PatiosHelper
         end
       end
     end
-    content_tag :span, strings.join(" + ")
+
+    if strings.present?
+      content_tag :span, strings.join(" + "), class: 'block patio-attribute'
+    end
   end
 
   def render_hours google_data
     current_day = Time.now.strftime("%A")
     all_days = google_data.dig('opening_hours', 'weekday_text')
     hours_today = all_days.reject{ |day| day.exclude?(current_day) }.first
-    capture { concat content_tag :span, hours_today } if hours_today.present?
+
+    if hours_today.present?
+      content_tag :span, hours_today, class: 'block patio-attribute'
+    end
   end
 
   def render_price google_data
     price = google_data["price_level"].to_i
     str = "$"*price
-    capture { concat content_tag :span, str }  if str.present?
+    if str.present?
+      content_tag :span, str, class: 'block patio-attribute'
+    end
   end
 
   def render_external_google_info_link google_place_id
