@@ -1,3 +1,5 @@
+require 'net/http'
+
 class PatiosController < ApplicationController
   before_action :set_patio, only: [:show]
 
