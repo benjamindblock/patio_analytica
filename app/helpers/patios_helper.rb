@@ -70,7 +70,7 @@ module PatiosHelper
     api_uri = URI("https://www.google.com/maps/search/")
     params = {api: 1, query: 'Google', query_place_id: google_place_id}
     api_uri.query = URI.encode_www_form(params)
-    link_to "Click here for more info", api_uri.to_s, target: "_blank"
+    link_to "More info", api_uri.to_s, target: "_blank"
   end
 
   def render_patio_link patio

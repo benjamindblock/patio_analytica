@@ -6,7 +6,7 @@
     <div id='wavy_letters'></div>
   </div>
 
-  <div class='patio-attribute'>
+  <div class='patio-attribute first'>
     <%= render_location(@patio) %>
   </div>
 
@@ -16,7 +16,9 @@
   <%= render_hours(@google_data) %>
 
   <div class='google-link'><%= render_external_google_info_link(@patio.google_place_id) %></div>
-  <div><%= link_to '<<<<<<<<< Back to Index', root_path %></div>
+  <div class='patio-link'><%= link_to 'Take me somewhere fun!', random_patios_path %></div>
+  <div class='patio-link last'><%= link_to '<<<<<<<<< Back to Index', root_path %></div>
+
 
   <div class='map-container'>
     <div id="map" class='center'></div>

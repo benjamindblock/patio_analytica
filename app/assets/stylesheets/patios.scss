@@ -55,8 +55,18 @@
 
 #patios_show {
   .patio-attribute {
-    padding-top: 18px;
+    padding-top: 10px;
     color: $olive;
+    &.first {
+      padding-top: 30px;
+    }
+  }
+
+  .patio-link {
+    padding-top: 5px;
+    &.last {
+      padding-bottom: 15px;
+    }
   }
 
   .patio-name {
@@ -66,7 +76,7 @@
   }
 
   .google-link {
-    padding-top: 20px;
+    padding-top: 40px;
   }
   .recommended {
     color: $yellow;
