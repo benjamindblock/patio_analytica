@@ -9,6 +9,12 @@
         media: 'all', 'data-turbolinks-track' => true %>
     <%= favicon_link_tag %>
 
+    <meta property="og:image" content="<%= image_url('patio_image.png') %>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="seattlepatio.club" />
+    <meta property="og:title" content="Seattle Patio Club" />
+    <meta property="og:description" content="A curated list of Seattle's best patios for dining and drinking" />
+    
     <% if Rails.env.production? %>
     <!-- Global site tag (gtag.js) - Google Analytics -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116570889-1"></script>
