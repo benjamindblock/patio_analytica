@@ -27,6 +27,15 @@
     float: left;
     width: 20%;
     padding: 10px;
+    .region-name {
+      padding-bottom: 15px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .column {
+      width: 40%;
+    }
   }
 
   .row:after {
@@ -42,6 +51,14 @@
   .patio-name {
     padding-right: 13px;
   }
+
+  form {
+    padding: 10px;
+    .patio-filter-container {
+      padding-right: 25px;
+    }
+  }
+
 
   .recommended {
     color: $yellow;

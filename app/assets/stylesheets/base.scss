@@ -11,6 +11,7 @@ $background: #fcfbf9;
 .hidden { display: none; }
 .right { float: right; }
 .left { float: left; }
+.inline { display: inline-block; }
 
 body {
   background-color: $background;

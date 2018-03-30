@@ -11,16 +11,46 @@
 
 <div class='index-break'></div>
 
+<%= form_tag patios_path, method: :get do %>
+  <div class='patio-filter-container inline'>
+    <%= label_tag :is_covered, 'Covered patio', class: 'inline' %>
+    <%= check_box_tag :is_covered, nil, params[:is_covered] %>
+  </div>
+  <div class='patio-filter-container inline'>
+    <%= label_tag :on_rooftop, 'Rooftop', class: 'inline' %>
+    <%= check_box_tag :on_rooftop, nil, params[:on_rooftop] %>
+  </div>
+  <div class='patio-filter-container inline'>
+    <%= label_tag :has_view, 'Has a view', class: 'inline' %>
+    <%= check_box_tag :has_view, nil, params[:has_view] %>
+  </div>
+  <div class='patio-filter-container inline'>
+    <%= label_tag :more_bar_than_restaurant, 'More of a bar vibe', class: 'inline' %>
+    <%= check_box_tag :more_bar_than_restaurant, nil, params[:more_bar_than_restaurant] %>
+  </div>
+  <div class='patio-filter-container inline'>
+    <%= label_tag :is_bougie, 'Bougie', class: 'inline' %>
+    <%= check_box_tag :is_bougie, nil, params[:is_bougie] %>
+  </div>
+<% end %>
+
 <div class='row'>
-  <% Patio.regions.each do |region, _v| %>
-    <div class='column'><%= region.titleize %></div>
-  <% end %>
-</div>
-<div class='row'>
-  <div class='column'><%= render_patios(@patios.south) %></div>
-  <div class='column'><%= render_patios(@patios.central) %></div>
-  <div class='column'><%= render_patios(@patios.downtown) %></div>
-  <div class='column'><%= render_patios(@patios.north) %></div>
+  <div class='column'>
+    <div class='region-name'><%= Patio.regions.keys.first.titleize %></div>
+    <%= render_patios(@patios.south) %>
+  </div>
+  <div class='column'>
+    <div class='region-name'><%= Patio.regions.keys.second.titleize %></div>
+    <%= render_patios(@patios.central) %>
+  </div>
+  <div class='column'>
+    <div class='region-name'><%= Patio.regions.keys.third.titleize %></div>
+    <%= render_patios(@patios.downtown) %>
+  </div>
+  <div class='column'>
+    <div class='region-name'><%= Patio.regions.keys.fourth.titleize %></div>
+    <%= render_patios(@patios.north) %>
+  </div>
 </div>
 
 <div class='row manifesto'>

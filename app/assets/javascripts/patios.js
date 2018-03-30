@@ -3,6 +3,12 @@
 
 $(document).on('ready', function() {
 
+  if($('#patios_index').length > 0){
+    $('#patios_index').on('change', '.patio-filter-container input', function(){
+      $(this).closest('form').submit();
+    })
+  }
+
   if($('#patios_show').length > 0){
     set_letters();
     animate_letters();
