@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180326154934) do
+ActiveRecord::Schema.define(version: 20180523040134) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "mixes", force: :cascade do |t|
+    t.string "name"
+    t.string "artist"
+    t.string "s3_url"
+    t.text "description"
+  end
 
   create_table "patios", force: :cascade do |t|
     t.string "name"

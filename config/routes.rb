@@ -5,5 +5,8 @@ Rails.application.routes.draw do
       get 'random'
     end
   end
+
+  resources :mixes, only: [:index]
+
   root 'patios#index'
 end
