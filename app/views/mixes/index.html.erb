@@ -1,0 +1,12 @@
+<% @mixes.each do |mix| %>
+  <div class='mix-container'>
+    <div class='mix-title-container'>
+      <h3><%= link_to mix.name, mix.s3_url %></h3>
+    </div>
+
+    <div class='mix-content-container'>
+      <span class='block'><%= "-- #{mix.artist}" %></span>
+      <span class='block'><%= "-- #{mix.description}" %></span>
+    </div>
+  </div>
+<% end %>

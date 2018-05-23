@@ -11,3 +11,8 @@ require 'patio_csv_importer'
 filepath = Rails.root.join('lib', 'import_files', 'import.csv')
 importer = PatioCsvImporter.new(filepath)
 importer.import_csv
+
+Mix.create!(name: "Simic's Mix",
+            artist: 'Simic',
+            description: 'New Mix',
+            s3_url: "https://s3-us-west-2.amazonaws.com/patio-mixes/Simic's+2018(08)+Mix.mp3")
