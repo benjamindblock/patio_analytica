@@ -81,3 +81,15 @@ a {
     opacity: 1;
   }
 }
+
+marquee {
+  padding-top: 10px;
+}
+
+.index-break {
+  height: 4px;
+  width: 100%;
+  border-bottom: 2px solid $dark-blue;
+  opacity: 0.7;
+  margin-bottom: 10px;
+}

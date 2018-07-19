@@ -5,6 +5,7 @@ class CreateMixes < ActiveRecord::Migration[5.1]
       t.string :artist
       t.string :s3_url
       t.text :description
+      t.string :duration
     end
   end
 end

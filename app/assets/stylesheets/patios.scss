@@ -5,21 +5,9 @@
 
 #patios_index {
 
-  .index-break {
-    height: 4px;
-    width: 100%;
-    border-bottom: 2px solid $dark-blue;
-    opacity: 0.7;
-    margin-bottom: 10px;
-  }
-
   .weather, .random-patio-link {
     padding: 10px;
     margin-top: 10px;
-  }
-
-  marquee {
-    padding-top: 10px;
   }
 
   .column {

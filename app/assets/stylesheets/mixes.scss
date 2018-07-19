@@ -1,0 +1,25 @@
+// Place all the styles related to the Patios controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'base';
+
+#mixes_index {
+  p {
+    float: center;
+  }
+
+  .mixes-container{
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    padding: 10px;
+
+    .mix-container{
+      padding-bottom: 30px;
+      span {
+        padding-top: 7px;
+      }
+    }
+
+  }
+}

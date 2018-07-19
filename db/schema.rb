@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20180523040134) do
     t.string "artist"
     t.string "s3_url"
     t.text "description"
+    t.string "duration"
   end
 
   create_table "patios", force: :cascade do |t|

@@ -1,5 +1,7 @@
 <div>
-  <h1>Seattle Patio Club</h1>
+  <h1>Seattle Patio Club
+    <%= link_to '** NEW ** SEATTLE PATIO CLUB MIX SERIES', mixes_path, class: 'weather' %>
+  </h1>
 </div>
 
 <div class='row'>
@@ -10,8 +12,6 @@
 <marquee><%= 'Welcome! :~)' %></marquee>
 
 <div class='index-break'></div>
-
-<%= link_to 'Mixes', mixes_path %>
 
 <%= form_tag patios_path, method: :get do %>
   <div class='patio-filter-container inline'>
