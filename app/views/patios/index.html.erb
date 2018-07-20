@@ -1,7 +1,14 @@
 <div>
   <h1>Seattle Patio Club
     <%= link_to '** NEW ** SEATTLE PATIO CLUB MIX SERIES', mixes_path, class: 'weather' %>
+    <span id="play_player"><%= fa_icon 'play-circle' %></span>
+    <span id="pause_player"><%= fa_icon 'pause-circle' %></span>
   </h1>
+
+  <audio controls autoplay id="player">
+    <source src="<%= "#{Mix.first.s3_url}" %>" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 </div>
 
 <div class='row'>

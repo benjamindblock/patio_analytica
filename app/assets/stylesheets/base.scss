@@ -93,3 +93,8 @@ marquee {
   opacity: 0.7;
   margin-bottom: 10px;
 }
+audio { display: none; }
+
+#play_player { display: none; }
+
+#play_player, #pause_player { cursor: pointer; }

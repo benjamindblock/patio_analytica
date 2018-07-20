@@ -6,7 +6,19 @@ $(document).on('ready', function() {
   if($('#patios_index').length > 0){
     $('#patios_index').on('change', '.patio-filter-container input', function(){
       $(this).closest('form').submit();
-    })
+    });
+
+    $('#patios_index').on('click', '#play_player', function(){
+      $('#player').trigger('play');
+      $(this).hide();
+      $('#pause_player').show();
+    });
+
+    $('#patios_index').on('click', '#pause_player', function(){
+      $('#player').trigger('pause');
+      $(this).hide();
+      $('#play_player').show();
+    });
   }
 
   if($('#patios_show').length > 0){
