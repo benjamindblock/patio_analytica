@@ -12,14 +12,14 @@ filepath = Rails.root.join('lib', 'import_files', 'import.csv')
 importer = PatioCsvImporter.new(filepath)
 importer.import_csv
 
-Mix.create!(name: "SPCM001: Patio After Dark Extraordinaire Mix",
-            artist: 'Simic',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in sagittis leo. Nulla ac consectetur lectus. Nunc fermentum arcu nec arcu sodales consequat. Proin efficitur orci quis lorem efficitur, sit amet maximus leo elementum. Integer et varius nunc. Sed blandit turpis ac diam varius dictum. Fusce id ullamcorper urna. Fusce lobortis tempor mauris, nec sollicitudin dolor cursus at. Aenean fermentum magna nec ex eleifend, in vestibulum eros aliquet. Praesent quis tortor erat. Sed volutpat nulla quis tellus commodo, mattis varius lectus fringilla. Mauris egestas enim eu lacus dictum aliquet. Nunc aliquam in velit at accumsan.',
-            duration: '1:10:24',
-            s3_url: "https://s3-us-west-2.amazonaws.com/patio-mixes/Simic's+2018(08)+Mix.mp3")
+Mix.create!(name: "SPCM001",
+            artist: "Alex Carrabba",
+            description: "10pm, Seattle, late July: the last rays of sunset are fading behind Queen Anne. Take a stroll along the Eastlake promenade and odds are that you'll find Alex Carrabba on the decks somewhere, providing expertly selected low-to-mid-tempo grooves to a moonlit dance floor. Join in.",
+            duration: '1:17:09',
+            s3_url: "https://s3-us-west-2.amazonaws.com/patio-mixes/SPCM001.mp3")
 
-Mix.create!(name: "SPCM002: Margaritaville's No-More-Margs Mix",
-            artist: 'Jimmy Buffet',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in sagittis leo. Nulla ac consectetur lectus. Nunc fermentum arcu nec arcu sodales consequat. Proin efficitur orci quis lorem efficitur, sit amet maximus leo elementum.',
-            duration: '00:50:13',
-            s3_url: "https://s3-us-west-2.amazonaws.com/patio-mixes/Simic's+2018(08)+Mix.mp3")
+Mix.create!(name: "SPCM002",
+            artist: 'GOOP',
+            description: "It's summer. It's hot. It's muggy. Sweat clings to your tank top. A butterfly temporary tattoo is peeling off your arm. Your friend GOOP pulls up in the '94 Dodge Dakota. You're feeling down, but not out. You're ready to explore... ",
+            duration: '1:28:35',
+            s3_url: "https://s3-us-west-2.amazonaws.com/patio-mixes/SPCM002.mp3")

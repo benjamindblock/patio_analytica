@@ -1,12 +1,13 @@
-<div>
+<div class='back-link'>
   <%= link_to '<<<< RETURN TO THE PATIOS <<', patios_path %>
 </div>
 
 <div>
   <div>
     <p>Welcome to the Seattle Patio Club Mix Series! A new collection of musical
-    journeys supplied by our good friends in Seattle and beyond. Mixes are
-    downloadable by right-clicking on the mix title and selecting "Save Link As"</p>
+    journeys supplied by our good friends in Seattle and beyond. Listen in your
+    browser by clicking on the mix, or download by right-clicking on the
+    title and selecting "Save Link As"</p>
 
     <p>Pop one on, and take a journey to a patio ~</p>
   </div>
@@ -19,11 +20,10 @@
   <% @mixes.each do |mix| %>
     <div class='mix-container'>
       <div class='mix-title-container'>
-        <h3><%= link_to mix.name, mix.s3_url, target: '_blank' %></h3>
+        <h3><%= link_to "#{mix.name} -- #{mix.artist}", mix.s3_url, target: '_blank' %></h3>
       </div>
 
       <div class='mix-content-container'>
-        <span class='block'><%= "Mixed by: #{mix.artist}" %></span>
         <span class='block'><%= "#{mix.description}" %></span>
         <span class='block'><%= "Duration: #{mix.duration}" %></span>
       </div>
