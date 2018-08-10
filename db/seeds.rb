@@ -23,3 +23,9 @@ Mix.create!(name: "SPCM002",
             description: "It's summer. It's hot. It's muggy. Sweat clings to your tank top. A butterfly temporary tattoo is peeling off your arm. Your friend GOOP pulls up in the '94 Dodge Dakota. You're feeling down, but not out. You're ready to explore... ",
             duration: '1:28:35',
             s3_url: "https://s3-us-west-2.amazonaws.com/patio-mixes/SPCM002.mp3")
+
+Mix.create!(name: "SPCM003",
+            artist: 'Nice Touch',
+            description: 'A burst of noise stops you in your tracks. You look up. On top of a nearby building you see Ahold Of & Simone bobbing back and forth, house rhythms echoing out over the city. Tracks flow together one after another, and you think: "Wow, they’ve got a Nice Touch with this..."',
+            duration: '1:02:46',
+            s3_url: "https://s3-us-west-2.amazonaws.com/patio-mixes/SPCM003.mp3")
