@@ -29,3 +29,9 @@ Mix.create!(name: "SPCM003",
             description: 'A burst of noise stops you in your tracks. You look up. On top of a nearby building you see Ahold Of & Simone bobbing back and forth, house rhythms echoing out over the city. Tracks flow together one after another, and you think: "Wow, they’ve got a Nice Touch with this..."',
             duration: '1:02:46',
             s3_url: "https://s3-us-west-2.amazonaws.com/patio-mixes/SPCM003.mp3")
+
+Mix.create!(name: "SPCM004",
+            artist: 'Sean Morrow',
+            description: "In the light of the molten summer sun, expanded outwards across a smokey horizon, a figure approaches. Becoming clearer - a baby blue lab coat bafflingly swaying in the absent breeze - it's Sean Morrow, headphones on, lost in the eclectic rhythms of his own selections.",
+            duration: '1:48:25',
+            s3_url: "https://s3-us-west-2.amazonaws.com/patio-mixes/SPCM004.mp3")
