@@ -32,6 +32,6 @@ Mix.create!(name: "SPCM003",
 
 Mix.create!(name: "SPCM004",
             artist: 'Sean Morrow',
-            description: "In the light of the molten summer sun, expanded outwards across a smokey horizon, a figure approaches. Becoming clearer - a baby blue lab coat bafflingly swaying in the absent breeze - it's Sean Morrow, headphones on, lost in the eclectic rhythms of his own selections.",
+            description: "In the light of the molten summer sun, expanding outwards across a smokey horizon, a figure approaches. Becoming clearer - a baby blue lab coat bafflingly swaying in the absent breeze - it's Sean Morrow, headphones on, lost in the eclectic rhythms of his own selections.",
             duration: '1:48:25',
             s3_url: "https://s3-us-west-2.amazonaws.com/patio-mixes/SPCM004.mp3")
