@@ -35,3 +35,9 @@ Mix.create!(name: "SPCM004",
             description: "In the light of the molten summer sun, expanding outwards across a smokey horizon, a figure approaches. Becoming clearer - a baby blue lab coat bafflingly swaying in the absent breeze - it's Sean Morrow, headphones on, lost in the eclectic rhythms of his own selections.",
             duration: '1:48:25',
             s3_url: "https://s3-us-west-2.amazonaws.com/patio-mixes/SPCM004.mp3")
+
+Mix.create!(name: "SPCM005",
+            artist: 'Sofi Lee',
+            description: "Whirs, clicks, robotic blips, and the whine of an unfurling zoom lens. Megapixels kept to a minimum. A retro-futuristic collection of summer tunes spanning classic lounge-muzak rhythms up to contemporary groovers with a sense of techno-playfulness. Sofi Lee is here, dispelling any popular notions of how one ought to enjoy themselves in 2018.",
+            duration: '1:17:01',
+            s3_url: "https://s3-us-west-2.amazonaws.com/patio-mixes/SPCM005.mp3")
