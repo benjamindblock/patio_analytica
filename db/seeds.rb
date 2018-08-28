@@ -39,5 +39,5 @@ Mix.create!(name: "SPCM004",
 Mix.create!(name: "SPCM005",
             artist: 'Sofi Lee',
             description: "Whirs, clicks, robotic blips, and the whine of an unfurling zoom lens. Megapixels kept to a minimum. A retro-futuristic collection of summer tunes spanning classic lounge-muzak rhythms up to contemporary groovers with a sense of techno-playfulness. Sofi Lee is here, dispelling any popular notions of how one ought to enjoy themselves in 2018.",
-            duration: '1:17:01',
+            duration: '1:17:00',
             s3_url: "https://s3-us-west-2.amazonaws.com/patio-mixes/SPCM005.mp3")
